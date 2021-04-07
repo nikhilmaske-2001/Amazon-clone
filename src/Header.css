@@ -16,3 +16,26 @@
   margin: 0 20px;
   margin-top: 10px;
 }
+
+.header__search {
+  /* Align all the elements in the row */
+  display: flex;
+  /* flex 1 says to stretch the container as big as possible */
+  flex: 1;
+  align-items: center;
+  border-radius: 24 px;
+}
+
+.header__searchInput {
+  height: 12px;
+  padding: 10px;
+  border: none;
+  /* Make the input field stretch width 100% (we have used flex 1 for header__search to make it responsive) */
+  width: 100%;
+}
+
+.header__searchIcon {
+  padding: 5px;
+  height: 22px i !important;
+  background-color: #cd9043;
+}
