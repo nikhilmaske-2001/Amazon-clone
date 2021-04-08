@@ -39,3 +39,16 @@
   height: 22px i !important;
   background-color: #cd9043;
 }
+
+.header__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+}
