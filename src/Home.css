@@ -1,0 +1,14 @@
+.home__image {
+  /* Show the banner 100% in the available moniter size */
+  width: 100%;
+  /* We want to keep the banner behind everything */
+  flex: -1;
+  /* We want to overlap other components on the banner */
+  margin-bottom: -150px;
+  /* Mask image is used to make the banner color fade at the bottom */
+  /* to bottom means to go from top to bottom */
+  /* rgba 0,0,0,1 = completely visible (opacity = 1)
+  rgba 0,0,0,0 = completely invisible (opacity = 0) */
+  /* Summery: GO from top to bottom and change the opacity of the banner image */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
