@@ -2,13 +2,17 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
         // "header" is used to wrap all the elements present in the top most (header) part of the amazon app
         <div className='header'>
-            {/* This is amazon logo */}
-            <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+            {/* Link adds the link to the homepage (i.e "/") */}
+            <Link to="/">
+                {/* This is amazon logo */}
+                <img className="header__logo" src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+            </Link>
 
             {/* This is input search field */}
             <div className="header__search">
@@ -50,11 +54,13 @@ function Header() {
                     </span>
                 </div>
 
-                <div className="header__optionBasket">
-                    {/* Shopping basket icon from material ui */}
-                    <ShoppingBasketIcon />
-                    <span className="header__optionLineTwo header__basketCount">0</span>
-                </div>
+                <Link to='/checkout'>
+                    <div className="header__optionBasket">
+                        {/* Shopping basket icon from material ui */}
+                        <ShoppingBasketIcon />
+                        <span className="header__optionLineTwo header__basketCount">0</span>
+                    </div>
+                </Link>
             </div>
         </div>
     )
