@@ -2,9 +2,12 @@ import React from 'react'
 import './Header.css'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { useStateValue } from "./StateProvider"
 
 function Header() {
+    const [{ basket }, dispatch] = useStateValue();
+
     return (
         // "header" is used to wrap all the elements present in the top most (header) part of the amazon app
         <div className='header'>
@@ -58,7 +61,7 @@ function Header() {
                     <div className="header__optionBasket">
                         {/* Shopping basket icon from material ui */}
                         <ShoppingBasketIcon />
-                        <span className="header__optionLineTwo header__basketCount">0</span>
+                        <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
                     </div>
                 </Link>
             </div>
