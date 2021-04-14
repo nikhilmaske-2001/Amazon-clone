@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { StateProvider } from './StateProvider';
-import reportWebVitals from './reportWebVitals';
-import registerServiceWorker from 'react-service-worker';
+// import reportWebVitals from './reportWebVitals';
+import * as serviceWorker from "./serviceWorker";
+import reducer, { initialState } from "./reducer"
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,5 +17,5 @@ ReactDOM.render(
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
-registerServiceWorker.unregister();
+// reportWebVitals();
+serviceWorker.unregister();
