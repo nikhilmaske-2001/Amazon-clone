@@ -1,3 +1,10 @@
+# Run this project
+
+To run this project on your local environment
+1. Clone this project on your local environment.
+2. Run `npm start` in your terminal and the development environment will start in your local host.
+3. Checkout the `http://localhost:3000` on your web browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
