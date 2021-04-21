@@ -10,13 +10,19 @@ function App() {
     <Router>
       <div className="app">
         {/* Placing header outside because we want it to render always */}
-        <Header />
 
         <Switch>
+          <Route path="/login">
+            <h1>This is login</h1>
+          </Route>
           <Route path="/checkout">
+            <Header />
+
             <Checkout />
           </Route>
           <Route path="/">
+            <Header />
+
             <Home />
           </Route>
         </Switch>
